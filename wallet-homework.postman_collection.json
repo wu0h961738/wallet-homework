@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "31d804f3-1209-4e5e-a051-bf123e88cc14",
+		"name": "wallet-homework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23200004"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"{{email}}\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Wallets",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjQ5MDYwODIxMjYsImlhdCI6MTc1MjQ4MjEyNiwidXNlcl9pZCI6ImNhNDRiOTY5LWJlMzEtNGQyNy05OGQzLTg0MzNjMGE5YjBmNSJ9.5N9pxlN37nkm_dqrDsNP2EpA9o4mjTjDCmmz1nz-JOo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Idempotency-Key",
+						"value": "unique-key-123",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/wallets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Wallet Balance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjQ5MDYwNzk3MjksImlhdCI6MTc1MjQ3OTcyOSwidXNlcl9pZCI6IjQ3ZmU3OGEzLWZlYzQtNGQ4NC1iMzNhLTdiYjc3ZDU2MjQ2ZiJ9.IbxBuSmJrK1LC_Ohr2aR8YDN1g2qYaV_1wbyGBrnap0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wallets/{{wallet_id}}/balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallets",
+						"{{wallet_id}}",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit to Wallet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjQ5MDYwNzk3MjksImlhdCI6MTc1MjQ3OTcyOSwidXNlcl9pZCI6IjQ3ZmU3OGEzLWZlYzQtNGQ4NC1iMzNhLTdiYjc3ZDU2MjQ2ZiJ9.IbxBuSmJrK1LC_Ohr2aR8YDN1g2qYaV_1wbyGBrnap0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Idempotency-Key",
+						"value": "unique-key-123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": \"100.50\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/wallets/{{wallet_id}}/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallets",
+						"{{wallet_id}}",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraw from Wallet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjQ5MDYwNzk3MjksImlhdCI6MTc1MjQ3OTcyOSwidXNlcl9pZCI6IjQ3ZmU3OGEzLWZlYzQtNGQ4NC1iMzNhLTdiYjc3ZDU2MjQ2ZiJ9.IbxBuSmJrK1LC_Ohr2aR8YDN1g2qYaV_1wbyGBrnap0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Idempotency-Key",
+						"value": "unique-key-123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": \"10.50\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/wallets/{{wallet_id}}/withdraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallets",
+						"{{wallet_id}}",
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer Between Wallets",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjQ5MDYwODIxMjYsImlhdCI6MTc1MjQ4MjEyNiwidXNlcl9pZCI6ImNhNDRiOTY5LWJlMzEtNGQyNy05OGQzLTg0MzNjMGE5YjBmNSJ9.5N9pxlN37nkm_dqrDsNP2EpA9o4mjTjDCmmz1nz-JOo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Idempotency-Key",
+						"value": "unique-key-123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"receiver_wallet_id\": \"{{receiver_wallet_uuid}}\",\n    \"amount\": \"2.75\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/wallets/{{wallet_id}}/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallets",
+						"{{wallet_id}}",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transaction History",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjQ5MDYwNzk3MjksImlhdCI6MTc1MjQ3OTcyOSwidXNlcl9pZCI6IjQ3ZmU3OGEzLWZlYzQtNGQ4NC1iMzNhLTdiYjc3ZDU2MjQ2ZiJ9.IbxBuSmJrK1LC_Ohr2aR8YDN1g2qYaV_1wbyGBrnap0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wallets/{{wallet_id}}/transactions?limit=10&offset=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallets",
+						"{{wallet_id}}",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": null,
+							"description": "the start date of range query",
+							"disabled": true
+						},
+						{
+							"key": "end_date",
+							"value": null,
+							"description": "the end date of range query",
+							"disabled": true
+						},
+						{
+							"key": "counterparty_wallet_id",
+							"value": "",
+							"description": "specific counterparty",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"description": "pagination"
+						},
+						{
+							"key": "offset",
+							"value": "0",
+							"description": "pagination"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
