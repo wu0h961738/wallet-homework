@@ -47,7 +47,7 @@ Although not required by the specifications, in practice, to enhance business st
 
    2. **Start all services**:
       ```bash
-      docker-compose up -d  #(or make docker-run)
+      docker compose up -d  #(or make docker-run)
       ```
 
    3. **Seed the database** (in a new terminal):
@@ -90,11 +90,11 @@ Although not required by the specifications, in practice, to enhance business st
    1 day design, 3 day development+testing, 1 day docker packaging + README.md
 
 ## which features you chose not to do in the submission
-    - Sacrificed SRP in many places to increase readability
-    - Transactions don't have retry mechanisms - didn't want to increase homework complexity
-    - Not friendly to unit test & integration test: The domain is too small and business logic is simple. The design challenges are mainly in persistence operations, so unit tests and integration tests have limited benefits. Therefore, I chose to skip them. However, I still declared a local mock_repository implementation in case integration tests are needed.
-    - Didn't consider database protection in microservice architecture: Assumed that all persistence would only be accessed by the current service. If services other than the wallet service share the database, and the overall product services exist in a microservice form, then database operations must be separated into an MQ + service&pod (workers) pattern to control connection pools to comply with database connection limits.
-    - JWT security: Usually TLS is used for connection protection, but this project doesn't implement TLS protection. So you'll see sensitive information in the JWT, but I still add an encryption layer to sensitive information.
+   - Sacrificed SRP in many places to increase readability
+   - Transactions don't have retry mechanisms - didn't want to increase homework complexity
+   - Not friendly to unit test & integration test: The domain is too small and business logic is simple. The design challenges are mainly in persistence operations, so unit tests and integration tests have limited benefits. Therefore, I chose to skip them. However, I still declared a local mock_repository implementation in case integration tests are needed.
+   - Didn't consider database protection in microservice architecture: Assumed that all persistence would only be accessed by the current service. If services other than the wallet service share the database, and the overall product services exist in a microservice form, then database operations must be separated into an MQ + service&pod (workers) pattern to control connection pools to comply with database connection limits.
+   - JWT security: Usually TLS is used for connection protection, but this project doesn't implement TLS protection. So you'll see sensitive information in the JWT, but I still add an encryption layer to sensitive information.
 
 ## API Documentation
 
