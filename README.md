@@ -66,9 +66,9 @@ Although not required by the specifications, in practice, to enhance business st
       - please refer to the API doc below
       - remember to add JWT token to the header of request
 
-   6. (optional) Import postman collection and set the environment.local
-      - please refer to the file in root -- wallet-homework.postman_collection.json
-      - after getting wallet info through apis, fill out them into the environments.local and have fun~
+   6. (optional) Test the APIs through postman
+      - please refer to the folder `postman` and import all files into postman
+      - modify all variables in `environments.local` at the first place, the variables could be retrieved by APIs `/login` and `/wallets`
    
 
 ## highlight how should reviewer view your code

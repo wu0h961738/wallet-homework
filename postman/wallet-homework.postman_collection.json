@@ -49,7 +49,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjQ5MDYwODIxMjYsImlhdCI6MTc1MjQ4MjEyNiwidXNlcl9pZCI6ImNhNDRiOTY5LWJlMzEtNGQyNy05OGQzLTg0MzNjMGE5YjBmNSJ9.5N9pxlN37nkm_dqrDsNP2EpA9o4mjTjDCmmz1nz-JOo",
+							"value": "{{jwt_token}}",
 							"type": "string"
 						}
 					]
@@ -90,7 +90,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjQ5MDYwNzk3MjksImlhdCI6MTc1MjQ3OTcyOSwidXNlcl9pZCI6IjQ3ZmU3OGEzLWZlYzQtNGQ4NC1iMzNhLTdiYjc3ZDU2MjQ2ZiJ9.IbxBuSmJrK1LC_Ohr2aR8YDN1g2qYaV_1wbyGBrnap0",
+							"value": "{{jwt_token}}",
 							"type": "string"
 						}
 					]
@@ -121,7 +121,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjQ5MDYwNzk3MjksImlhdCI6MTc1MjQ3OTcyOSwidXNlcl9pZCI6IjQ3ZmU3OGEzLWZlYzQtNGQ4NC1iMzNhLTdiYjc3ZDU2MjQ2ZiJ9.IbxBuSmJrK1LC_Ohr2aR8YDN1g2qYaV_1wbyGBrnap0",
+							"value": "{{jwt_token}}",
 							"type": "string"
 						}
 					]
@@ -172,7 +172,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjQ5MDYwNzk3MjksImlhdCI6MTc1MjQ3OTcyOSwidXNlcl9pZCI6IjQ3ZmU3OGEzLWZlYzQtNGQ4NC1iMzNhLTdiYjc3ZDU2MjQ2ZiJ9.IbxBuSmJrK1LC_Ohr2aR8YDN1g2qYaV_1wbyGBrnap0",
+							"value": "{{jwt_token}}",
 							"type": "string"
 						}
 					]
@@ -223,7 +223,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjQ5MDYwODIxMjYsImlhdCI6MTc1MjQ4MjEyNiwidXNlcl9pZCI6ImNhNDRiOTY5LWJlMzEtNGQyNy05OGQzLTg0MzNjMGE5YjBmNSJ9.5N9pxlN37nkm_dqrDsNP2EpA9o4mjTjDCmmz1nz-JOo",
+							"value": "{{jwt_token}}",
 							"type": "string"
 						}
 					]
@@ -274,7 +274,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjQ5MDYwNzk3MjksImlhdCI6MTc1MjQ3OTcyOSwidXNlcl9pZCI6IjQ3ZmU3OGEzLWZlYzQtNGQ4NC1iMzNhLTdiYjc3ZDU2MjQ2ZiJ9.IbxBuSmJrK1LC_Ohr2aR8YDN1g2qYaV_1wbyGBrnap0",
+							"value": "{{jwt_token}}",
 							"type": "string"
 						}
 					]
